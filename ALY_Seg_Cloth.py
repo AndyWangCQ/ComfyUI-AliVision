@@ -52,7 +52,7 @@ class ALY_Seg_Cloth:
         
         now = datetime.datetime.now()
         date_str = now.strftime("%Y-%m-%d")
-        folder_path = os.path.join(custom_nodes_path,"Comfyui_ALY","cache",f"{date_str}.jpg")
+        folder_path = os.path.join(custom_nodes_path,"ComfyUI-AliVision","cache",f"{date_str}.jpg")
 
         # 零时缓存转换成阿里io.buff
         save_tensor_image(image,folder_path)

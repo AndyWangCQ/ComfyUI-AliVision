@@ -51,7 +51,7 @@ class ALY_Seg_head:
         
         now = datetime.datetime.now()
         date_str = now.strftime("%Y-%m-%d")
-        folder_path = os.path.join(custom_nodes_path,"Comfyui_ALY","cache")
+        folder_path = os.path.join(custom_nodes_path,"ComfyUI-AliVision","cache")
         
         if not os.path.exists(folder_path):
            os.makedirs(folder_path, exist_ok=True)

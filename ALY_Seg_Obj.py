@@ -45,7 +45,7 @@ class ALY_Seg_Obj:
     RETURN_NAMES = ("image","back_type")
     OUTPUT_NODE = True
     FUNCTION = "sample"
-    CATEGORY = "CXH"
+    CATEGORY = "AliVision"
 
     def sample(self,image,back_type):
         

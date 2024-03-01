@@ -46,7 +46,7 @@ class ALY_Seg_Cloth:
     RETURN_NAMES = ("cloth","part")
     OUTPUT_NODE = True
     FUNCTION = "sample"
-    CATEGORY = "CXH"
+    CATEGORY = "AliVision"
 
     def sample(self,cloth_type,image,return_form):
         

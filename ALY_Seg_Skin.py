@@ -44,7 +44,7 @@ class ALY_Seg_Skin:
     RETURN_NAMES = ("image","url",)
     OUTPUT_NODE = True
     FUNCTION = "sample"
-    CATEGORY = "CXH"
+    CATEGORY = "AliVision"
 
     def sample(self,image):
         

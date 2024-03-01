@@ -10,7 +10,7 @@ https://vision.aliyun.com/imageseg?spm=api-workbench.api_explorer.0.0.604ce85cen
 (2).需要安装依赖：requirements.txt
 
 python_embeded\python.exe pip install -r requirements.txt
-
+阿里的库:https://help.aliyun.com/zh/viapi/developer-reference/python?
 如果阿里的库安装不上可以下面百度网盘下载解压把里面文件复制到：comfyui 路径\python_embeded\Lib\site-packages
 
 链接：https://pan.baidu.com/s/1Wt7fLMktnlwuDCrGeV7DqQ

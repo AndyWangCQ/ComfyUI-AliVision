@@ -41,8 +41,8 @@ class ALY_Seg_head:
                 }
         }
 
-    RETURN_TYPES = ("IMAGE","INT","INT","INT","INT")
-    RETURN_NAMES = ("image","Width","Height","X","Y")
+    RETURN_TYPES = ("IMAGE","INT","INT","INT","INT","STRING")
+    RETURN_NAMES = ("image","Width","Height","X","Y","Message")
     OUTPUT_NODE = True
     FUNCTION = "sample"
     CATEGORY = "AliVision"
@@ -85,6 +85,11 @@ class ALY_Seg_head:
             print("==========错误 start===========")
             print(error)            
             print("==========错误 end===========")
+            img = io.BytesIO(urlopen("https://p1.ssl.qhmsg.com/t018d70892f97c5866f.png").read())
+            image2 = Image.open(img)              
+            image2 = image2.convert("RGBA")             
+            source_img = pil2tensor(image2)
+            return (source_img,0,0,0,0,error.message)
         
             
         img = io.BytesIO(urlopen(image_url).read())
@@ -95,4 +100,4 @@ class ALY_Seg_head:
             image2 = image2.convert("RGB")    
         source_img = pil2tensor(image2)
         # 返回最好2个，不然图片容易出问题
-        return (source_img,widht,Height,X,Y)
+        return (source_img,widht,Height,X,Y,"识别成功")
